@@ -1,0 +1,17 @@
+#Latest version stored at https://github.com/eaterofpies/build-scripts
+#Project is the thing your're executable name
+PROJECT=foo
+#Extra libraries you need
+LIBS=
+#where we put our source
+SRCDIR=src
+
+#The following should be fairly sane defaults
+CC=g++
+CFLAGS=-g -Wall -Werror -std=c++11
+CXXFLAGS=$(CFLAGS)
+LDFLAGS=
+
+#include common rules
+include ./rules.mk
+
