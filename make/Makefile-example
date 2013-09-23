@@ -1,17 +1,29 @@
 #Latest version stored at https://github.com/eaterofpies/build-scripts
-#Project is the thing your're executable name
+#Project is your executable name
 PROJECT=foo
-#Extra libraries you need
-LIBS=
-#where we put our source
-SRCDIR=src
 
-#The following should be fairly sane defaults
-CC=g++
-CFLAGS=-g -Wall -Werror -std=c++11
-CXXFLAGS=$(CFLAGS)
-LDFLAGS=
+#defaults
+#########
+#directory to look for source in
+#SRCDIR=src
+
+#C++ file extension
+#CXXEXT=cxx
+
+#C++ compiler
+#CCXX=g++
+
+#C++ compiler flags
+#CXXFLAGS=-g -Wall -Werror -std=c++11
+
+#C compiler flags (set to C++ flags as we use that by default)
+#CFLAGS=$(CXXFLAGS)
+
+#linker flags
+#LDFLAGS=
+
+#additional libraries
+#LIBS=
 
 #include common rules
 include ./rules.mk
-
