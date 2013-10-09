@@ -84,7 +84,7 @@ clean:
 # compile the code
 %.o: %.$(CXXEXT)
 	@echo $(SRCDIR)$(shell $(CCXX) $(CXXFLAGS) -M $<) > $(basename $@).dep.new
-	@$(MAKE) --silent -f $(basename $@).dep.new 2> /dev/null
+	@$(MAKE) --silent --dry-run -f $(basename $@).dep.new 2> /dev/null > /dev/null
 	@mv $(basename $@).dep.new $(basename $@).dep
 	$(CCXX) $(CXXFLAGS) -c -o $@ $<
 
